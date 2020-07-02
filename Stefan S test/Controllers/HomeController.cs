@@ -26,5 +26,12 @@ namespace Stefan_S_test.Controllers
 
             return View();
         }
+
+        public ActionResult Background()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
     }
 }

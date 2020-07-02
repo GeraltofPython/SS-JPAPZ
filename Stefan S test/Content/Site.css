@@ -22,3 +22,8 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.main-card {
+    color: rgb(128, 0, 32);
+    background-color: lavender;
+}
