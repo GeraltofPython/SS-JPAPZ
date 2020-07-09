@@ -33,5 +33,11 @@ namespace Stefan_S_test.Controllers
 
             return View();
         }
+        public ActionResult Locations()
+        {
+            ViewBag.Message = "Your location page.";
+
+            return View();
+        }
     }
 }
