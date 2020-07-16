@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+    <div class="container">
+        <!--Brings information to the Index part in the Home Controller as post-->
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+        {
+            <!--secures the data-->
+            @Html.AntiForgeryToken()
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">A Value</span>
+                </div>
+                <input name="a" type="text" class="form-control" placeholder="Enter text...">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">B Value</span>
+                </div>
+                <input name="b" type="text" class="form-control" placeholder="Enter text...">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">C Value</span>
+                </div>
+                <input name="c" type="text" class="form-control" placeholder="Enter text...">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        }
+        <div>
+            <h2>Q Positive: @ViewBag.ZVal</h2>
+            <h2>Q Negative: @ViewBag.QVal</h2>
+        </div>
+    </div>
