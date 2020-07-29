@@ -31,6 +31,10 @@ function ViewData(data) {
         date.append(data["list"][i]["date"]);
         date.className = "text-center";
 
+        let windD = document.createElement("p");
+        windD.append(data["list"][i]["windDirectionC"]);
+        windD.className = "text-center";
+
         let weather = document.createElement("p");
         weather.append(data["list"][i]["weatherStateName"]);
         weather.className = "text-center";
@@ -43,13 +47,43 @@ function ViewData(data) {
         max.append(data["list"][i]["maxTemp"]);
         max.className = "text-center";
 
+        let temperature = document.createElement("p");
+        temperature.append(data["list"][i]["theTemp"]);
+        temperature.className = "text-center";
+
+        let humidity = document.createElement("p");
+        humidity.append(data["list"][i]["humidity"]);
+        humidity.className = "text-center";
+
+        let visibility = document.createElement("p");
+        visibility.append(data["list"][i]["visibility"]);
+        visibility.className = "text-center";
+
+        let sunRise = document.createElement("p");
+        sunRise.append(data["list"][i]["sunRise"]);
+        sunRise.className = "text-center";
+
+        let sunSet = document.createElement("p");
+        sunSet.append(data["list"][i]["sunSet"]);
+        sunSet.className = "text-center"
+
+        let timeZone = document.createElement("p");
+        timeZone.append(data["list"][i]["timezone"]);
+        timeZone.className = "text-center"
+
         let brick = document.createElement("br");
 
         $("#weathers").append(date);
+        $("#weathers").append(windD);
         $("#weathers").append(weather);
         $("#weathers").append(min);
         $("#weathers").append(max);
-        $("#weathers").append(brick);
+        $("#weathers").append(temperature);
+        $("#weathers").append(humidity);
+        $("#weathers").append(visibility);
+        $("#weathers").append(sunRise);
+        $("#weathers").append(sunSet);
+        $("#weathers").append(timeZone);
         $("#weathers").append(brick);
     }
 }
