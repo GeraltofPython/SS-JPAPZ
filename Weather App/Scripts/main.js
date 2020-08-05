@@ -25,6 +25,8 @@ function ViewData(data) {
 
     $("#weathers").append(name);
 
+   
+
     for (var i = 0; i < data.list.length; i++) {
         
         let date = document.createElement("h3");
@@ -38,6 +40,11 @@ function ViewData(data) {
         let weather = document.createElement("p");
         weather.append(data["list"][i]["weatherStateName"]);
         weather.className = "text-center";
+
+        
+        let weatherAbbr = document.createElementNS(";
+        weatherAbbr.append(img);
+        weatherAbbr.className = "text-center";
 
         let min = document.createElement("p");
         min.append(data["list"][i]["minTemp"]);
@@ -74,6 +81,7 @@ function ViewData(data) {
         let brick = document.createElement("br");
 
         $("#weathers").append(date);
+        $("#weathers").append(weatherAbbr);
         $("#weathers").append(windD);
         $("#weathers").append(weather);
         $("#weathers").append(min);

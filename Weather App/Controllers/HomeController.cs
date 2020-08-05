@@ -36,6 +36,7 @@ namespace Weather_App.Controllers
                 WeatherInfo temp = new WeatherInfo();
 
                 temp.weatherStateName = (string)data["consolidated_weather"][i]["weather_state_name"];
+                temp.weatherStateAbbr = (string)data["consolidated_weather"][i]["weather_state_abbr"];
                 temp.windDirectionC = "Wind Direction: " + (string)data["consolidated_weather"][i]["wind_direction_compass"];
                 temp.minTemp = "Min Temp: " + (string)data["consolidated_weather"][i]["min_temp"];
                 temp.maxTemp = "Max Temp: " + (string)data["consolidated_weather"][i]["max_temp"];
@@ -46,6 +47,7 @@ namespace Weather_App.Controllers
                 temp.sunSet = "Sun Set: " + (string)data["sun_set"];
                 temp.timezone = "Timezone: " + (string)data["timezone"];
                 temp.date = (string)data["consolidated_weather"][i]["applicable_date"];
+
 
 
                 current.list.Add(temp);
@@ -77,6 +79,7 @@ namespace Weather_App.Controllers
     public class WeatherInfo
     {
         public string weatherStateName;
+        public string weatherStateAbbr;
         public string windDirectionC;
         public string minTemp;
         public string maxTemp;
@@ -101,4 +104,6 @@ namespace Weather_App.Controllers
 /* 
  * We are going to grab wind_direction_compass, the_temp, humidity, visibility, sun_rise, sun_set, timezone
  * add another city
- */
+ *
+ *
+ **/
