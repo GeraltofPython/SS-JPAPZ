@@ -36,7 +36,6 @@ namespace Weather_App.Controllers
                 WeatherInfo temp = new WeatherInfo();
 
                 temp.weatherStateName = (string)data["consolidated_weather"][i]["weather_state_name"];
-                temp.weatherStateAbbr = (string)data["consolidated_weather"][i]["weather_state_abbr"];
                 temp.windDirectionC = "Wind Direction: " + (string)data["consolidated_weather"][i]["wind_direction_compass"];
                 temp.minTemp = "Min Temp: " + (string)data["consolidated_weather"][i]["min_temp"];
                 temp.maxTemp = "Max Temp: " + (string)data["consolidated_weather"][i]["max_temp"];

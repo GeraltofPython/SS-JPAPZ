@@ -41,11 +41,6 @@ function ViewData(data) {
         weather.append(data["list"][i]["weatherStateName"]);
         weather.className = "text-center";
 
-        
-        let weatherAbbr = document.createElementNS(";
-        weatherAbbr.append(img);
-        weatherAbbr.className = "text-center";
-
         let min = document.createElement("p");
         min.append(data["list"][i]["minTemp"]);
         min.className = "text-center";
@@ -81,7 +76,6 @@ function ViewData(data) {
         let brick = document.createElement("br");
 
         $("#weathers").append(date);
-        $("#weathers").append(weatherAbbr);
         $("#weathers").append(windD);
         $("#weathers").append(weather);
         $("#weathers").append(min);
