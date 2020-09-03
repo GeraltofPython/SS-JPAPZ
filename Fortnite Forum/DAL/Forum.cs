@@ -6,6 +6,8 @@ namespace Fortnite_Forum.DAL
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
+
+    //change
     [Table("Forum")]
     public partial class Forum
     {
